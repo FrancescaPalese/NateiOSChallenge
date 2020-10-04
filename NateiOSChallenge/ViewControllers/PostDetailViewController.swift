@@ -8,7 +8,7 @@
 import UIKit
 import SafariServices
 
-class ProductDetailViewController: UIViewController {
+class PostDetailViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var merchantLabel: UILabel!
@@ -21,7 +21,7 @@ class ProductDetailViewController: UIViewController {
           .foregroundColor: UIColor.black,
           .underlineStyle: NSUnderlineStyle.single.rawValue]
     
-    var viewModel: ProductDetailViewModel!
+    var viewModel: PostDetailViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,7 @@ class ProductDetailViewController: UIViewController {
     }
     
     private func setupViewLayout() {
-        self.nameLabel.text = viewModel.name
+        self.nameLabel.text = viewModel.title
         self.merchantLabel.text = viewModel.merchant
         if let url = viewModel.urlImage {
             self.productImageView.loadImageUsingCacheWithUrlString(urlString: url)
@@ -52,7 +52,7 @@ class ProductDetailViewController: UIViewController {
 }
 
 // MARK: - SFSafariViewControllerDelegate Implementation
-extension ProductDetailViewController: SFSafariViewControllerDelegate {
+extension PostDetailViewController: SFSafariViewControllerDelegate {
   func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
     controller.dismiss(animated: true, completion: nil)
   }

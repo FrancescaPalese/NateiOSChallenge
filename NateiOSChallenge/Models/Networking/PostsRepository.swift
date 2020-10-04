@@ -10,7 +10,7 @@ import Foundation
 protocol APIServiceProtocol: class {
     
     func fetchPosts(with request: PostsRequest?, completion: @escaping ((Result<PostsResponse, APIServiceError>) -> Void))
-    func createProduct(with product: CreateProductRequest, completion: @escaping ((Result<CreateProductResponse, APIServiceError>) -> Void))
+    func createPost(with request: CreatePostRequest?, completion: @escaping ((Result<CreatePostResponse, APIServiceError>) -> Void))
 }
 
 // Enum of Errors

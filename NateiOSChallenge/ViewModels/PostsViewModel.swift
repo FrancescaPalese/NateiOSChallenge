@@ -68,51 +68,19 @@ class PostsViewModel {
         }
     }
         
-    func createProduct(completion: @escaping ((Result<[Post], Error>) -> Void)) {
-            let request = CreateProductRequest(title: "prodotto2", images: ["rectangsle"], url: "sskafskal", merchant: "Francesca")
-            apiService.createProduct(with: request) { result in
+//    TODO: complete func
+    func createPost(completion: @escaping ((Result<[Post], Error>) -> Void)) {
+        let product = Product(title: "prodotto2", images: ["rectangsle"], url: "sskafskal", merchant: "Francesca")
+        let request = CreatePostRequest(product: product)
+        apiService.createPost(with: request) { result in
                 
-//                switch result {
-//                case .success(let response):
-////                    let posts = response.
-//                    self.productItems.append(response)
-//                    print(response)
-//                case .failure(let error):
-//                    completion(.failure(error))
-//                }
+                switch result {
+                case .success(let response):
+                    print(response)
+                case .failure(let error):
+                    print(error)
+                    completion(.failure(error))
+                }
             }
         }
     }
-//        apiService.fetchProducts()
-//        apiService.fetchCharacters(from: offset) { result in
-//
-//            switch result {
-//
-//            case .success(let charactersData):
-//
-//                if let response = charactersData, let characters = response.results {
-//                    DispatchQueue.main.async {
-//                        self.isFetchInProgress = false
-//                        self.characters.append(contentsOf: characters)
-//                        self.totalItems = response.total ?? 0
-//                        self.offset += response.limit ?? 0
-//
-//                        if response.offset! > 0 {
-//                            let indexPathsToReload = self.calculateIndexPathsToReload(from: characters)
-//                            self.delegate?.onFetchCompleted(with: indexPathsToReload)
-//                        } else {
-//                            self.delegate?.onFetchCompleted(with: .none)
-//                        }
-//
-//                    }
-//
-//                }
-//
-//            case .failure(let error):
-////                TODO: handling the error
-//                self.isFetchInProgress = false
-//                print(error.localizedDescription)
-//            }
-//        }
-    
-

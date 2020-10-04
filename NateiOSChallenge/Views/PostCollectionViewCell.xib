@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="ProductCollectionViewCell" customModule="nate_ios_challenge_" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gTV-IL-0wX" customClass="PostCollectionViewCell" customModule="NateiOSChallenge" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -47,8 +47,8 @@
             </constraints>
             <connections>
                 <outlet property="activityIndicatorView" destination="F1w-OU-H8V" id="IKh-1c-wSr"/>
-                <outlet property="nameLabel" destination="SmJ-2k-JhW" id="GBh-sH-EWJ"/>
                 <outlet property="productImageView" destination="eYR-vo-dEb" id="7at-sC-R82"/>
+                <outlet property="titleLabel" destination="SmJ-2k-JhW" id="GBh-sH-EWJ"/>
             </connections>
             <point key="canvasLocation" x="34.782608695652179" y="61.607142857142854"/>
         </collectionViewCell>

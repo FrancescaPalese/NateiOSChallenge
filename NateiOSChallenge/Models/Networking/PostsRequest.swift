@@ -61,7 +61,7 @@ public struct Post: Decodable, Hashable {
     }
 }
 
-public struct Product: Decodable {
+public struct Product: Codable {
     let title: String
     let images: [String]?
     let url: String
@@ -70,16 +70,31 @@ public struct Product: Decodable {
 
 //MARK: - CreateProductRequest
 
-struct CreateProductRequest: Encodable {
-    var title: String
-    var images: [String]
-    var url: String
-    var merchant: String
+struct CreatePostRequest: Encodable {
+    
+    var product: Product
+    
+    enum CodingKeys: String, CodingKey {
+      case title, images, url, merchant
+    }
+    
+    func resource() -> Endpoint {
+        return Endpoint(path: "/product/create", verb: .POST)
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(product.title, forKey: .title)
+        try container.encode(product.images, forKey: .images)
+        try container.encode(product.url, forKey: .url)
+        try container.encode(product.merchant, forKey: .merchant)
+    }
+    
 }
 
 //MARK: - CreateProductResponse
 
-struct CreateProductResponse: Decodable {
+struct CreatePostResponse: Decodable {
     let post: Post
     
     enum CodingKeys: CodingKey {

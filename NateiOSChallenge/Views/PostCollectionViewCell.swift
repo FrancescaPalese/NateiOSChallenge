@@ -7,22 +7,21 @@
 
 import UIKit
 
-class ProductCollectionViewCell: UICollectionViewCell {
+class PostCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet public weak var nameLabel: UILabel!
+    @IBOutlet public weak var titleLabel: UILabel!
     @IBOutlet public weak var productImageView: UIImageView!
     @IBOutlet public var activityIndicatorView: UIActivityIndicatorView!
     var downloadTask: URLSessionDownloadTask?
     
     var post: Post? {
         didSet {
-            self.nameLabel.text = post?.product.title
+            self.titleLabel.text = post?.product.title
             if post?.product.images?.count != 0 {
                 if let urlString = post?.product.images?[0] {
                     downloadTask = productImageView.loadImage(urlString: urlString) { isLoaded in
                         
                         if isLoaded {
-                            print("to do stuff")
                             self.activityIndicatorView.stopAnimating()
                             self.activityIndicatorView.removeFromSuperview()
                         }

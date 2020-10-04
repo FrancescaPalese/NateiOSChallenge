@@ -12,7 +12,7 @@ enum Section {
 }
 
 
-class ProductsViewController: UIViewController {
+class PostsViewController: UIViewController {
     
     @IBOutlet weak var productsCollectionView: UICollectionView!
     
@@ -31,15 +31,7 @@ class ProductsViewController: UIViewController {
         
         self.makeDataSource()
         self.applySnapshot()
-//        viewModel.createProduct() { result in
-//            switch result {
-//            case .success(_):
-//                print("CREATED")
-//            case .failure(_):
-////                TODO: handle the error
-//                print("fetch products failed")
-//            }
-//        }
+        
         viewModel.fetchPosts() { result in
             switch result {
             case .success(let model):
@@ -58,7 +50,7 @@ class ProductsViewController: UIViewController {
     
     private func makeDataSource() {
         
-        let cellRegistration = UICollectionView.CellRegistration<ProductCollectionViewCell, Post>(cellNib: UINib(nibName: "ProductCollectionViewCell", bundle: nil)) { (cell, indexPath, post) in
+        let cellRegistration = UICollectionView.CellRegistration<PostCollectionViewCell, Post>(cellNib: UINib(nibName: "PostCollectionViewCell", bundle: nil)) { (cell, indexPath, post) in
             
             cell.post = post
             
@@ -88,15 +80,15 @@ class ProductsViewController: UIViewController {
     
 }
 
-extension ProductsViewController: UICollectionViewDelegate {
+extension PostsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let post = dataSource.itemIdentifier(for: indexPath) else {
             return
         }
         
-        if let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? ProductDetailViewController {
-            nextViewController.viewModel = ProductDetailViewModel(with: post)
+        if let nextViewController = self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailViewController") as? PostDetailViewController {
+            nextViewController.viewModel = PostDetailViewModel(with: post)
             
             self.navigationController?.pushViewController(nextViewController, animated: true)
         }
@@ -141,7 +133,7 @@ extension ProductsViewController: UICollectionViewDelegate {
     
 }
 
-extension ProductsViewController: UIScrollViewDelegate {
+extension PostsViewController: UIScrollViewDelegate {
     //     func scrollViewDidScroll(_ scrollView: UIScrollView) {
     //        let offsetY = scrollView.contentOffset.y
     //                let contentHeight = scrollView.contentSize.height
@@ -162,7 +154,7 @@ extension ProductsViewController: UIScrollViewDelegate {
 }
 
 
-extension ProductsViewController: UICollectionViewDelegateFlowLayout {
+extension PostsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let size = self.view.window?.frame {
             return CGSize(width: size.width - 40, height: size.height/3 * 2 )

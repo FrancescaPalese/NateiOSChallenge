@@ -91,7 +91,7 @@ fileprivate class MockApiService: APIServiceProtocol {
         completionClosure = completion
     }
     
-    func createProduct(with product: CreateProductRequest, completion: @escaping ((Result<CreateProductResponse, APIServiceError>) -> Void)) {
+    func createProduct(with product: CreatePostRequest, completion: @escaping ((Result<CreatePostResponse, APIServiceError>) -> Void)) {
 //        TODO
         print("created")
     }

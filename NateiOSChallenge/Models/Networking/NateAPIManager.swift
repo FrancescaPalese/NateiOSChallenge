@@ -50,17 +50,21 @@ public class NateAPIManager: APIServiceProtocol {
         }).resume()
     }
     
-    func createProduct(with product: CreateProductRequest, completion: @escaping ((Result<CreateProductResponse, APIServiceError>) -> Void)) {
+//    TODO: refactor this func
+    func createPost(with request: CreatePostRequest?, completion: @escaping ((Result<CreatePostResponse, APIServiceError>) -> Void)) {
+        
+        guard let endpoint = request?.resource() else { return }
+        let path = basePath + endpoint.path
 
-        let path = "http://localhost:3000/product/create"
+//        let path = "http://localhost:3000/product/create"
 //
-        let data = try? JSONEncoder().encode(product)
+        let data = try? JSONEncoder().encode(request)
         print(data as? String)
 
         let request = NSMutableURLRequest(url: NSURL(string: path)! as URL,
                                                 cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
-        request.httpMethod = "POST"
+        request.httpMethod = endpoint.verb.rawValue
         request.allHTTPHeaderFields = ["content-type": "application/json"]
         request.httpBody = data! as Data
 
@@ -71,9 +75,7 @@ public class NateAPIManager: APIServiceProtocol {
                 return
             }
             do {
-                var string = String(data: data!, encoding: .ascii)
-                print(string)
-                let response = try JSONDecoder().decode(CreateProductResponse.self, from: jsonData)
+                let response = try JSONDecoder().decode(CreatePostResponse.self, from: jsonData)
                 completion(Result.success(response))
             } catch {
                 completion(.failure(.decodeError))

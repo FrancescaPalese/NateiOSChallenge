@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class ProductDetailViewModel {
+class PostDetailViewModel {
     
     var post: Post
     
-    var name: String {
+    var title: String {
         return post.product.title
     }
     
