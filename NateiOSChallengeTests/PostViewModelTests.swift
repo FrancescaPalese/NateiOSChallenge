@@ -8,7 +8,7 @@
 import XCTest
 @testable import NateiOSChallenge
 
-class ProductViewModelTests: XCTestCase {
+class PostViewModelTests: XCTestCase {
 
     var sut: PostsViewModel!
     
@@ -79,6 +79,8 @@ class ProductViewModelTests: XCTestCase {
 
 // MARK: - MockApiService
 fileprivate class MockApiService: APIServiceProtocol {
+
+    
     
     var completionResponse: PostsResponse? //stub
     
@@ -91,8 +93,8 @@ fileprivate class MockApiService: APIServiceProtocol {
         completionClosure = completion
     }
     
-    func createProduct(with product: CreatePostRequest, completion: @escaping ((Result<CreatePostResponse, APIServiceError>) -> Void)) {
-//        TODO
+//    TODO: implement func
+    func createPost(with request: CreatePostRequest?, completion: @escaping ((Result<CreatePostResponse, APIServiceError>) -> Void)) {
         print("created")
     }
     

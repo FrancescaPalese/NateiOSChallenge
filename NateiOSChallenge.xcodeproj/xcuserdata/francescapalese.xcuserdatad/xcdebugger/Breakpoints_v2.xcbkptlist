@@ -322,38 +322,6 @@
             endingLineNumber = "49"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "405075AE-9024-464C-A6BF-577320E96E6B - 67e8ee17f296e6f3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;NateiOSChallenge.PostsViewModel, Swift.Error&gt;) -&gt; () in NateiOSChallenge.ProductsViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "NateiOSChallenge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescapalese/Documents/nate.ios.challenge./NateiOSChallenge/ViewControllers/ProductsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "333">
-               </Location>
-               <Location
-                  uuid = "405075AE-9024-464C-A6BF-577320E96E6B - 42a02dfe44867b01"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Result&lt;NateiOSChallenge.PostsViewModel, Swift.Error&gt;) -&gt; () in NateiOSChallenge.ProductsViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "NateiOSChallenge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/francescapalese/Documents/nate.ios.challenge./NateiOSChallenge/ViewControllers/ProductsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "49"
-                  endingLineNumber = "49"
-                  offsetFromSymbolStart = "19">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

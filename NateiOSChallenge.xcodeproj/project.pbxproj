@@ -19,7 +19,7 @@
 		1CD4A63525223843003E699B /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD4A63425223843003E699B /* PostsViewModel.swift */; };
 		1CD513DF2524F2C300844A78 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD513DE2524F2C300844A78 /* PostDetailViewController.swift */; };
 		1CD513E42524F2D700844A78 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD513E32524F2D700844A78 /* PostDetailViewModel.swift */; };
-		1CEAFF562528C9B4006E8EF5 /* ProductViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAFF552528C9B4006E8EF5 /* ProductViewModelTests.swift */; };
+		1CEAFF562528C9B4006E8EF5 /* PostViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAFF552528C9B4006E8EF5 /* PostViewModelTests.swift */; };
 		1CF010BB2522450E00927A59 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF010B92522450E00927A59 /* PostCollectionViewCell.swift */; };
 		1CF010BC2522450E00927A59 /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CF010BA2522450E00927A59 /* PostCollectionViewCell.xib */; };
 		1CF010C2252329BE00927A59 /* UIImage+Downloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF010C1252329BE00927A59 /* UIImage+Downloading.swift */; };
@@ -52,7 +52,7 @@
 		1CD4A63425223843003E699B /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		1CD513DE2524F2C300844A78 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		1CD513E32524F2D700844A78 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
-		1CEAFF552528C9B4006E8EF5 /* ProductViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModelTests.swift; sourceTree = "<group>"; };
+		1CEAFF552528C9B4006E8EF5 /* PostViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModelTests.swift; sourceTree = "<group>"; };
 		1CF010B92522450E00927A59 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		1CF010BA2522450E00927A59 /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
 		1CF010C1252329BE00927A59 /* UIImage+Downloading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Downloading.swift"; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		1C5340D12528BA8E006ECD64 /* NateiOSChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				1CEAFF552528C9B4006E8EF5 /* ProductViewModelTests.swift */,
+				1CEAFF552528C9B4006E8EF5 /* PostViewModelTests.swift */,
 				1C5340D42528BA8E006ECD64 /* Info.plist */,
 			);
 			path = NateiOSChallengeTests;
@@ -291,7 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CEAFF562528C9B4006E8EF5 /* ProductViewModelTests.swift in Sources */,
+				1CEAFF562528C9B4006E8EF5 /* PostViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
